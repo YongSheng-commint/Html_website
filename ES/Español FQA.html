@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veltrix Motors</title>
+    <link rel="icon" href="https://images.scalebranding.com/lion-head-v-letter-logo-3cd1b25f-95db-49aa-b553-dcc1283823db.jpg" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Header */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 60px;
+            background-color: rgb(255, 255, 255);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .logo {
+            width: 100px;
+            height: 80px;
+        }
+
+        .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dropbtn:hover {
+    background-color: #0056b3; /* Darken the button color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    border-radius: 5px;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Light grey background on hover */
+    color: #007bff; /* Change text color on hover */
+}
+        nav a {
+            margin: 0 20px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+
+        /* Hero Image */
+        #image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            margin-top: 80px; /* To offset the fixed header */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 40px 0 20px 0;
+            color: #333;
+        }
+
+        /* Centered Contact Section */
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        hr {
+            width: 80%;
+            margin: 30px auto;
+            border: 1px solid #333;
+        }
+
+        fieldset {
+            border: 2px solid #333;
+            padding: 30px;
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        legend {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 1rem;
+            margin: 8px 0;
+        }
+
+        ul li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: rgba(241, 241, 241, 0.9);
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header-container">
+        <img src="https://images.scalebranding.com/lion-head-v-letter-logo-3cd1b25f-95db-49aa-b553-dcc1283823db.jpg" alt="Logo de Toyota" class="logo">
+        
+        <nav>
+            <a href="Español home.html">Inicio</a>
+            <a href="Español about.html">Acerca de</a>
+            <a href="Español FQA.html">Preguntas Frecuentes</a>
+            <a href="Español contact.html">Contáctanos</a>
+        </nav>
+    
+            <div class="dropdown">
+                <button class="dropbtn">Language</button>
+                <div class="dropdown-content">
+                    <a href="file:///C:/Users/Student/Desktop/YS%20Python%20Project/Html/English/Html%20project.html">English</a>
+                    <a href="file:///C:/Users/Student/Desktop/YS%20Python%20Project/Html/Fran%C3%A7ais/Fran%C3%A7ais%20home.html">Français</a>
+                    <a href="file:///C:/Users/Student/Desktop/YS%20Python%20Project/Html/Espa%C3%B1ol/Espa%C3%B1ol%20home%20.html">Español</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Imagen principal -->
+    <img id="image" src="https://www.gifcen.com/wp-content/uploads/2021/05/car-gif-2.gif" alt="Imagen de auto">
+    
+    <hr>
+    
+    <!-- Título de la sección -->
+    <h1>Preguntas Frecuentes</h1>
+    
+    <!-- Sección de contacto centrada -->
+    <div class="contact-container">
+        <p><strong>Preguntas frecuentes de los clientes:</strong></p>
+        <p>El KAP-H VFX Type R está diseñado para entusiastas del rendimiento. Combina un diseño llamativo con características de alto rendimiento, lo que lo convierte en uno de los autos más emocionantes en la carretera.</p>
+        <p><strong>¿Qué tipo de combustible usa el Type R para un rendimiento óptimo?</strong></p>
+    </div>
+    
+    <!-- Recomendaciones de combustible -->
+    <fieldset>
+        <legend>Combustible Recomendado</legend>
+        <ul>
+            <li>Shell V-Power NiTRO+ (91 octanos o más) <a href="https://www.shell.com">Comprar aquí</a></li>
+            <li>Chevron Supreme Plus (91 octanos o más) <a href="https://www.chevron.com">Comprar aquí</a></li>
+            <li>BP Ultimate (91 octanos o más) <a href="https://www.bp.com">Comprar aquí</a></li>
+            <li>Mobil 93 Supreme (93 octanos) <a href="https://www.mobil.com">Comprar aquí</a></li>
+            <li>Chevron Techron Premium (91 octanos o más) <a href="https://www.chevron.com">Comprar aquí</a></li>
+        </ul>
+    </fieldset>
+    
+    <hr>
+    
+    <p>¿Cuáles son los mejores autos para carreras? El Honda S2000 es un auto deportivo ligero con tracción trasera y un motor de 2.0L o 2.2L (dependiendo del año del modelo).</p>
+    <p>Es conocido por su manejo equilibrado y dirección precisa, lo que lo convierte en una opción fantástica para carreras, especialmente en eventos de carreras en carretera o drifting.</p>
+    <p><strong>¿Qué tipo de combustible usa el Honda S2000 para un mejor rendimiento?</strong></p>
+    
+    <fieldset>
+        <legend>Combustible Recomendado</legend>
+        <ul>
+            <li>Shell V-Power NiTRO+ (91 octanos o más) <a href="https://www.shell.com">Comprar aquí</a></li>
+            <li>Chevron Supreme Plus (91 octanos o más) <a href="https://www.chevron.com">Comprar aquí</a></li>
+            <li>BP Ultimate (91 octanos o más) <a href="https://www.bp.com">Comprar aquí</a></li>
+            <li>Mobil 93 Supreme (93 octanos) <a href="https://www.mobil.com">Comprar aquí</a></li>
+            <li>Chevron Techron Premium (91 octanos o más) <a href="https://www.chevron.com">Comprar aquí</a></li>
+        </ul>
+    </fieldset>
+    
+    <!-- JavaScript para la rotación de imágenes -->
+    <script>
+        const images = [
+            "https://www.gifcen.com/wp-content/uploads/2021/05/car-gif-2.gif",
+            "https://64.media.tumblr.com/tumblr_mdzf255AHR1rkfvqno1_500.gif",
+            "https://i.pinimg.com/originals/7c/d4/15/7cd415c2a1d5649e16a8eef19cf13664.gif"
+        ];
+    
+        let currentImageIndex = 0;
+    
+        function changeImage() {
+            document.getElementById("image").src = images[currentImageIndex];
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+        }
+    
+        setInterval(changeImage, 10000);
+    </script>
+    
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Veltrix Motors. Todos los derechos reservados.</p>
+    </footer>
+    
+    </body>
+    </html>
+    

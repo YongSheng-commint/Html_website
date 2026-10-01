@@ -1,348 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veltrix Motors</title>
-    <link rel="icon" href="https://images.scalebranding.com/lion-head-v-letter-logo-3cd1b25f-95db-49aa-b553-dcc1283823db.jpg" type="image/x-icon">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Header */
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 60px;
-            background-color: rgb(255, 255, 255);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-        }
-
-        .dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.dropbtn:hover {
-    background-color: #0056b3; /* Darken the button color on hover */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    min-width: 160px;
-    border-radius: 5px;
-    z-index: 1;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1; /* Light grey background on hover */
-    color: #007bff; /* Change text color on hover */
-}
-
-        .logo {
-            width: 100px;
-            height: 80px;
-        }
-
-        nav a {
-            margin: 0 15px;
-            color: black;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #007bff;
-        }
-
-        /* Hero Image */
-        #image {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            /* Remove margin-top */
-        }
-
-        h1 {
-            font-size: 40px;
-            margin: 20px 0;
-        }
-
-        h2 {
-            font-size: 36px;
-            margin: 20px 0;
-        }
-
-        hr {
-            width: 80%;
-            margin: 30px auto;
-            border: 1px solid black;
-        }
-
-        .content {
-            margin: 40px 10%;
-            text-align: left;
-            font-size: 18px;
-            line-height: 1.8;
-        }
-
-        /* Car Models */
-        .car-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            padding: 20px;
-        }
-
-        .car-box {
-            width: 350px;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .car-box:hover {
-            transform: scale(1.05);
-        }
-
-        .car-box img {
-            width: 100%;
-            height: auto;
-        }
-
-        .car-details {
-            padding: 15px;
-        }
-
-        .car-title {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .car-description {
-            font-size: 14px;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .price {
-            font-size: 18px;
-            font-weight: bold;
-            color: #108619;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 15px;
-            margin-top: 10px;
-            background: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 14px;
-            transition: background 0.3s ease;
-        }
-
-        .btn:hover {
-            background: #0056b3;
-        }
-
-        /* Footer */
-        footer {
-            background-color: rgba(241, 241, 241, 0.9);
-            color: rgb(0, 0, 0);
-            text-align: center;
-            padding: 20px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        /* Category Links */
-        .category-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-
-        .category-links a {
-            color: black;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        .category-links a:hover {
-            color: #007bff;
-        }
-
-    </style>
+    <title>À propos | Veltrix Motors</title>
+    <meta name="description" content="L'histoire de Veltrix Motors, d'un petit garage en 1998 aux véhicules électriques et pilotés par l'IA d'aujourd'hui.">
+    <link rel="icon" href="https://images.scalebranding.com/lion-head-v-letter-logo-3cd1b25f-95db-49aa-b553-dcc1283823db.jpg">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-<!-- Encabezado -->
-    <div class="header-container">
-        <img src="https://images.scalebranding.com/lion-head-v-letter-logo-3cd1b25f-95db-49aa-b553-dcc1283823db.jpg" alt="Logo de Toyota" class="logo">
-        
-        <nav>
+    <header class="site-header">
+        <a href="FRhome.html">
+            <img src="https://images.scalebranding.com/lion-head-v-letter-logo-3cd1b25f-95db-49aa-b553-dcc1283823db.jpg" alt="Accueil Veltrix Motors" class="logo" width="100" height="80">
+        </a>
+
+        <nav class="main-nav" aria-label="Navigation principale">
             <a href="FRhome.html">Accueil</a>
-            <a href="FRabout.html">À propos</a>
+            <a href="FRabout.html" aria-current="page">À propos</a>
             <a href="FRFQA.html">Questions fréquentes</a>
             <a href="FRcontact.html">Contactez-nous</a>
         </nav>
-        <div class="dropdown">
-            <button class="dropbtn">Language</button>
-            <div class="dropdown-content">
-                <a href="English/Html%project.html">English</a>
-                <a href="FR/FRhome.html">Français</a>
+
+        <div class="language-dropdown">
+            <button type="button" class="language-btn" aria-expanded="false" aria-controls="language-menu">Langue</button>
+            <div class="language-menu" id="language-menu">
+                <div class="language-menu-inner">
+                    <a href="../English/About.html" lang="en" hreflang="en">English</a>
+                    <a href="FRabout.html" lang="fr" hreflang="fr" aria-current="true">Français</a>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<!-- Imagen Principal -->
-<img id="image" src="https://www.gifcen.com/wp-content/uploads/2021/05/car-gif-2.gif" alt="Imagen de Auto">
+    </header>
 
-<hr>
+    <main>
+        <img class="hero" src="https://www.gifcen.com/wp-content/uploads/2021/05/car-gif-2.gif" alt="">
 
-<!-- Sección Acerca de -->
-<h1>Acerca de Veltrix Motors</h1>
-<div class="content">
-    <p>Veltrix Motors comenzó en 1998 cuando James Veltrix, un ingeniero apasionado, soñó con construir autos más inteligentes y eficientes. Empezando en un pequeño garaje, creó el Veltrix One, un sedán híbrido revolucionario que llamó la atención de la industria.</p>
-    <p>Para 2010, Veltrix lanzó su primer vehículo eléctrico, el Nova, estableciendo nuevos estándares en autonomía y rendimiento. A pesar de los desafíos, la empresa siguió innovando y presentó el Hyperion en 2015, un auto deportivo de lujo impulsado por energía solar y celdas de hidrógeno.</p>
-    <p>Hoy en día, Veltrix Motors lidera el sector de los vehículos eléctricos e impulsados por IA, comprometidos con la innovación y la sostenibilidad, dando forma al futuro de la movilidad.</p>
-</div>
+        <hr>
 
-<hr>
-
-<!-- Sección Modelos de Autos -->
-<h2>Nuestros Modelos de Autos</h2>
-<div class="car-container">
-    <!-- Auto 1 -->
-    <div class="car-box">
-        <img src="https://carbuyerlabs.com/wp-content/uploads/2017/09/FERRARI-250-GTO-5526_15-825x454.jpg" alt="Modelo de Auto 1">
-        <div class="car-details">
-            <div class="car-title">Veltrix One</div>
-            <div class="car-description">Un sedán híbrido con máxima eficiencia y diseño innovador.</div>
-            <div class="price">$29,999</div>
-            <a href="https://www.ferrari.com/en-EN/auto/250-gto?utm_source=chatgpt.com" class="btn">Más Información</a>
+        <h1>À propos de Veltrix Motors</h1>
+        <div class="content">
+            <p>Veltrix Motors a vu le jour en 1998, lorsque James Veltrix, un ingénieur passionné, a rêvé de construire des voitures plus intelligentes et plus efficaces. Parti d'un petit garage, il a créé la Veltrix One, une berline hybride révolutionnaire qui a attiré l'attention de toute l'industrie.</p>
+            <p>En 2010, Veltrix a lancé son premier véhicule électrique, la Nova, qui a établi de nouvelles références en matière d'autonomie et de performances. Malgré les difficultés, l'entreprise a continué d'avancer et a présenté en 2015 l'Hyperion, une voiture de sport de luxe alimentée par l'énergie solaire et des piles à hydrogène.</p>
+            <p>Aujourd'hui, Veltrix Motors est un leader des véhicules électriques et pilotés par l'IA. Engagée en faveur de l'innovation et du développement durable, l'entreprise façonne l'avenir de la mobilité.</p>
         </div>
-    </div>
 
-    <!-- Auto 2 -->
-    <div class="car-box">
-        <img src="https://thespeedtrap.net/wp-content/uploads/2017/03/want-car.jpg?w=1360" alt="Modelo de Auto 2">
-        <div class="car-details">
-            <div class="car-title">Veltrix Nova</div>
-            <div class="car-description">Un vehículo completamente eléctrico con una impresionante autonomía.</div>
-            <div class="price">$39,999</div>
-            <a href="https://www.lamborghini.com/en-en/history/veneno?utm_source=chatgpt.com" class="btn">Más Información</a>
+        <hr>
+
+        <h2>Nos modèles</h2>
+        <div class="car-container">
+            <div class="car-box">
+                <img src="https://carbuyerlabs.com/wp-content/uploads/2017/09/FERRARI-250-GTO-5526_15-825x454.jpg" alt="Veltrix One" loading="lazy">
+                <div class="car-details">
+                    <h3 class="car-title">Veltrix One</h3>
+                    <p class="car-description">Une berline hybride alliant efficacité de pointe et design innovant.</p>
+                    <p class="price">29&nbsp;999&nbsp;$</p>
+                    <a href="https://www.ferrari.com/en-EN/auto/250-gto" class="btn">En savoir plus</a>
+                </div>
+            </div>
+
+            <div class="car-box">
+                <img src="https://thespeedtrap.net/wp-content/uploads/2017/03/want-car.jpg?w=1360" alt="Veltrix Nova" loading="lazy">
+                <div class="car-details">
+                    <h3 class="car-title">Veltrix Nova</h3>
+                    <p class="car-description">Un véhicule 100&nbsp;% électrique à l'autonomie impressionnante.</p>
+                    <p class="price">39&nbsp;999&nbsp;$</p>
+                    <a href="https://www.lamborghini.com/en-en/history/veneno" class="btn">En savoir plus</a>
+                </div>
+            </div>
+
+            <div class="car-box">
+                <img src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2018/05/rare25.jpg" alt="Veltrix Hyperion" loading="lazy">
+                <div class="car-details">
+                    <h3 class="car-title">Veltrix Hyperion</h3>
+                    <p class="car-description">Une voiture de sport de luxe alimentée par l'énergie solaire et des piles à hydrogène.</p>
+                    <p class="price">99&nbsp;999&nbsp;$</p>
+                    <a href="https://www.ferrari.com/en-EN/auto/250-gto" class="btn">En savoir plus</a>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <!-- Auto 3 -->
-    <div class="car-box">
-        <img src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2018/05/rare25.jpg" alt="Modelo de Auto 3">
-        <div class="car-details">
-            <div class="car-title">Veltrix Hyperion</div>
-            <div class="car-description">Un auto deportivo de lujo impulsado por energía solar y celdas de hidrógeno.</div>
-            <div class="price">$99,999</div>
-            <a href="https://www.ferrari.com/en-EN/auto/250-gto?utm_source=chatgpt.com" class="btn">Más Información</a>
+        <hr>
+
+        <div class="category-links">
+            <a href="https://www.carbase.my/segment/sportscar">Voitures de sport</a>
+            <a href="https://www.electricforall.org/what-is-an-electric-car/">Véhicules électriques</a>
+            <a href="https://www.carsome.my/news/item/hybrid-cars-malaysia">Voitures hybrides</a>
+            <a href="https://www.zigwheels.my/new-cars/luxury-cars">Voitures de luxe</a>
         </div>
-    </div>
-</div>
+    </main>
 
-<hr>
+    <footer class="site-footer">
+        <p>&copy; 2025 Veltrix Motors. Tous droits réservés.</p>
+    </footer>
 
-<!-- Enlaces a Categorías -->
-<div class="category-links">
-    <a href="https://www.carbase.my/segment/sportscar?utm_source=chatgpt.com">Autos Deportivos</a>
-    <a href="https://www.electricforall.org/what-is-an-electric-car/">Vehículos Eléctricos</a>
-    <a href="https://www.carsome.my/news/item/hybrid-cars-malaysia?utm_source=chatgpt.com">Autos Híbridos</a>
-    <a href="https://www.zigwheels.my/new-cars/luxury-cars?utm_source=chatgpt.com">Autos de Lujo</a>
-</div>
-
-<!-- JavaScript para Rotación de Imágenes -->
-<script>
-    const images = [
-        "https://www.gifcen.com/wp-content/uploads/2021/05/car-gif-2.gif",
-        "https://64.media.tumblr.com/tumblr_mdzf255AHR1rkfvqno1_500.gif",
-        "https://i.pinimg.com/originals/7c/d4/15/7cd415c2a1d5649e16a8eef19cf13664.gif"
-    ];
-
-    let currentImageIndex = 0;
-
-    function changeImage() {
-        const imageElement = document.getElementById("image");
-        imageElement.style.opacity = 0;
-        setTimeout(() => {
-            imageElement.src = images[currentImageIndex];
-            imageElement.style.opacity = 1;
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-        }, 500);
-    }
-
-    setInterval(changeImage, 10000);
-</script>
-
-<br/>
-<br/>
-<br/>
-<br/>
-
-<footer>
-    <p>&copy; 2025 Veltrix Motors. Todos los derechos reservados.</p>
-</footer>
-
+    <script src="../js/main.js"></script>
 </body>
 </html>

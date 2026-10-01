@@ -1,0 +1,611 @@
+/* Shared styles for every Veltrix Motors page (English and French). */
+
+:root {
+    --brand: #0069d9;       /* white text on this blue passes WCAG AA contrast */
+    --brand-dark: #0056b3;
+    --text: #333;
+    --muted: #555;
+    --price: #108619;
+    --page-bg: #f9f9f9;
+    --card-bg: #fff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Elements hidden from JavaScript (filters, tabs) must stay hidden even when a class sets display. */
+[hidden] {
+    display: none !important;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    background-color: var(--page-bg);
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    padding-bottom: 40px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Header */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: block;
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.main-nav {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 30px;
+}
+
+.main-nav a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible,
+.main-nav a[aria-current="page"] {
+    color: var(--brand);
+}
+
+/* Language dropdown: opens on click/keyboard (js/main.js), and on hover for mouse users */
+.language-dropdown {
+    position: relative;
+}
+
+.language-btn {
+    padding: 10px 16px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--brand);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.language-btn:hover,
+.language-btn:focus-visible {
+    background-color: var(--brand-dark);
+}
+
+.language-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+    min-width: 160px;
+    padding-top: 8px; /* gap that keeps the hover active while moving down to the menu */
+    text-align: left;
+}
+
+.language-menu-inner {
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.language-dropdown.open .language-menu {
+    display: block;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .language-dropdown:hover .language-menu {
+        display: block;
+    }
+}
+
+.language-menu a {
+    display: block;
+    padding: 12px 16px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.language-menu a:hover,
+.language-menu a:focus-visible {
+    color: var(--brand);
+    background-color: #f0f0f0;
+}
+
+.language-menu a[aria-current] {
+    font-weight: bold;
+}
+
+/* Hero image */
+.hero {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+.hero.fading {
+    opacity: 0;
+}
+
+h1 {
+    margin: 20px 16px;
+    font-size: 40px;
+}
+
+h2 {
+    margin: 20px 16px;
+    font-size: 36px;
+}
+
+hr {
+    width: 80%;
+    margin: 30px auto;
+    border: 1px solid #000;
+}
+
+.intro {
+    margin: 0 16px 10px;
+    font-size: 18px;
+}
+
+/* Long text (About page) */
+.content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.content p + p {
+    margin-top: 1em;
+}
+
+/* Category links and vehicle tabs */
+.category-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+    margin: 0 16px 20px;
+}
+
+.category-links a,
+.category-btn {
+    padding: 6px 4px;
+    font: inherit;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.category-links a:hover,
+.category-links a:focus-visible,
+.category-btn:hover,
+.category-btn:focus-visible,
+.category-btn[aria-pressed="true"] {
+    color: var(--brand);
+}
+
+.category-btn[aria-pressed="true"] {
+    border-bottom-color: var(--brand);
+}
+
+/* Car cards */
+.car-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.car-box {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    max-width: 100%;
+    overflow: hidden;
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.car-box:hover {
+    transform: scale(1.05);
+}
+
+.car-box img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.car-details {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.car-title {
+    margin: 0 0 10px;
+    font-size: 22px;
+}
+
+.car-description {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.price {
+    margin-top: auto; /* lines prices and buttons up across a row of cards */
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--price);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    background: var(--brand);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background: var(--brand-dark);
+}
+
+.cta {
+    margin: 10px 0 20px;
+    font-size: 16px;
+}
+
+/* Previous / next arrows under the vehicle tabs */
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0 20px;
+}
+
+.carousel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: #000;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.carousel-btn:hover,
+.carousel-btn:focus-visible {
+    color: var(--brand);
+    border-color: var(--brand);
+}
+
+/* Explore page: filters next to the car grid */
+.explore-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+}
+
+.sidebar {
+    flex: 0 0 280px;
+    padding: 30px;
+    text-align: left;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.filters h2 {
+    margin: 0 0 15px;
+    font-size: 18px;
+}
+
+.filters label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.filters select,
+.filters input[type="range"] {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.filters select {
+    padding: 12px;
+    font-size: 14px;
+    color: var(--text);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.price-display {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--brand);
+}
+
+.explore-layout .car-container {
+    display: grid;
+    flex: 1;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    padding: 0;
+}
+
+.explore-layout .car-box {
+    width: auto;
+}
+
+.explore-layout .car-box img {
+    height: 200px;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    padding: 40px 0;
+    font-size: 18px;
+}
+
+/* Contact page */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 16px;
+}
+
+.service-box {
+    width: 300px;
+    max-width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-box h3 {
+    margin-bottom: 8px;
+    color: var(--brand);
+}
+
+.contact-form,
+.info-box {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.contact-form fieldset,
+.info-box {
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form fieldset {
+    padding: 30px;
+    text-align: left;
+    border: 2px solid #333;
+}
+
+.contact-form legend {
+    padding: 0 8px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.contact-form label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font: inherit;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form .btn {
+    display: flex;
+    margin: 20px auto 0;
+    font-size: 16px;
+}
+
+.form-status {
+    margin: 10px 16px;
+    font-weight: bold;
+    color: var(--price);
+}
+
+/* FAQ page */
+.faq {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.faq p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.info-box {
+    padding: 20px 30px;
+    border: 2px solid #333;
+}
+
+.info-box h2 {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+}
+
+.info-box ul {
+    list-style: none;
+}
+
+.info-box li {
+    margin: 8px 0;
+}
+
+.info-box a {
+    color: var(--brand);
+    text-decoration: none;
+}
+
+.info-box a:hover,
+.info-box a:focus-visible {
+    text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+    padding: 20px;
+    color: #000;
+    background-color: #f1f1f1;
+}
+
+/* Tablets and phones */
+@media (max-width: 900px) {
+    .explore-layout {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .sidebar {
+        flex-basis: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        position: static;
+        flex-wrap: wrap;
+        padding: 10px 16px;
+        gap: 10px;
+    }
+
+    .main-nav {
+        order: 3;
+        flex-basis: 100%;
+        gap: 8px 20px;
+    }
+
+    .logo {
+        width: 70px;
+        height: 56px;
+    }
+
+    .hero {
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .contact-form fieldset,
+    .info-box {
+        padding: 20px;
+    }
+}
+
+/* Respect the "reduce motion" setting */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+
+    .car-box:hover {
+        transform: none;
+    }
+}
